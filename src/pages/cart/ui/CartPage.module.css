@@ -1,0 +1,152 @@
+.page {
+  padding: 40px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 80vh;
+}
+
+.emptyPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  gap: 24px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  font-family: "Outfit", sans-serif;
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.itemsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.itemCard {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .itemCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.itemImage {
+  width: 100px;
+  height: 100px;
+  background: #333;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.itemInfo {
+  flex: 1;
+}
+
+.itemTitle {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.itemSize {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.itemPrice {
+  color: var(--accent);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.itemActions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (max-width: 600px) {
+  .itemActions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.removeButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.removeButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+
+
+.summaryWrapper {
+  position: sticky;
+  top: 100px;
+}
+
+.summaryCard {
+  background: var(--bg-secondary);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+}
+
+.summaryTitle {
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.totalPrice {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 32px;
+}
+
+.fullWidth {
+  width: 100%;
+}

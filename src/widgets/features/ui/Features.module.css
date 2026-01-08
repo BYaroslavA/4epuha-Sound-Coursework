@@ -1,0 +1,70 @@
+.section {
+  padding: 120px 0;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2px;
+  background: var(--border-strong);
+  border: 1px solid var(--border-strong);
+}
+
+.card {
+  background: var(--bg-primary);
+  padding: 80px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  transition: all var(--duration-normal) var(--ease-expo);
+  position: relative;
+  min-height: 480px;
+}
+
+.card:hover {
+  background: var(--bg-secondary);
+}
+
+.card:hover .icon {
+  color: var(--accent);
+}
+
+.card::before {
+  content: 'FILE_REF: 4E.FTS';
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+}
+
+.iconWrapper {
+  margin-bottom: 48px;
+  color: var(--text-dim);
+  transition: color var(--duration-normal) var(--ease-expo);
+}
+
+.icon {
+  display: flex;
+}
+
+.title {
+  font-family: 'Syne', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.text {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}

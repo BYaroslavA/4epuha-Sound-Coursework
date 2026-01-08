@@ -1,0 +1,177 @@
+.container {
+  max-width: 1600px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 0 20px;
+  }
+}
+
+.sectionPadding {
+  padding: 120px 0;
+}
+
+.title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(48px, 8vw, 120px);
+  font-weight: 800;
+  margin-bottom: 40px;
+  letter-spacing: -0.05em;
+  color: var(--text-primary);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 24px;
+  margin-bottom: 48px;
+  max-width: 800px;
+}
+
+.centered {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.marker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.partnersSection {
+  padding: 100px 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border-strong);
+  position: relative;
+  overflow: hidden;
+}
+
+.partnersBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 80px;
+  align-items: center;
+  opacity: 0.4;
+}
+
+.partnerLogo {
+  font-family: 'Syne', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  filter: grayscale(1);
+  transition: all 0.4s ease;
+}
+
+.partnerLogo:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  color: var(--accent);
+}
+
+.testimonialsSection {
+  margin: 200px auto;
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2px;
+  background: var(--border-strong);
+  margin-top: 80px;
+  border: 1px solid var(--border-strong);
+}
+
+.testimonialCard {
+  background: var(--bg-primary);
+  padding: 60px 40px;
+  transition: background 0.3s;
+}
+
+.testimonialCard:hover {
+  background: var(--bg-secondary);
+}
+
+.quoteText {
+  font-family: 'Syne', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  margin-bottom: 40px;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.authorInfo h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.authorInfo span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.aboutSection {
+  padding: 160px 0;
+  background: var(--bg-tertiary);
+  position: relative;
+}
+
+.splitLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 120px;
+  align-items: center;
+}
+
+.aboutHeroImage {
+  position: relative;
+  padding: 20px;
+  border: 1px solid var(--border-strong);
+}
+
+.aboutHeroImage::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 40px;
+  height: 40px;
+  border-top: 2px solid var(--accent);
+  border-left: 2px solid var(--accent);
+}
+
+.aboutHeroImage img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  filter: grayscale(0.5) contrast(1.1);
+}
+
+@media (max-width: 1024px) {
+  .splitLayout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}

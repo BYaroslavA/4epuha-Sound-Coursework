@@ -1,0 +1,29 @@
+.section {
+  padding: 120px 0;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 64px;
+  border-bottom: 2px solid var(--border-strong);
+  padding-bottom: 24px;
+}
+
+.title {
+  font-family: 'Syne', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 48px;
+}
