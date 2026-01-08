@@ -292,27 +292,39 @@
 @media (max-width: 1024px) {
   .nav { display: none; }
   .header { padding: 0 20px; }
-  .search { min-width: 200px; }
+  .search { min-width: 180px; }
 }
 
 @media (max-width: 768px) {
   .logoText { font-size: 16px; }
   .logo { gap: 8px; }
-  .actions { gap: 12px; }
+  .actions { gap: 16px; }
   .search { 
-    min-width: 140px; 
-    padding: 0 8px;
-    gap: 8px;
+    display: none;
+  }
+  .userName {
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
   .header { padding: 0 12px; }
-  .logoText { display: none; }
-  .search { 
-    flex: 1;
-    min-width: 0;
+  .logoText { 
+    display: none; 
   }
+  .logoImage {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header { padding: 0 8px; }
+  .logo { gap: 6px; }
+  .logoImage { width: 24px; height: 24px; }
+  .burgerButton { padding: 6px; }
+  .cart { padding: 6px; }
+  .cartIcon { width: 18px; height: 18px; }
 }
 
 .burgerButton {

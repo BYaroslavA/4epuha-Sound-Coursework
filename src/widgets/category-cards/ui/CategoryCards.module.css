@@ -1,79 +1,60 @@
 .section {
-  width: 100vw;
+  width: 100%;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
   overflow: hidden;
   background: #000;
+  padding: 0;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   width: 100%;
   margin: 0;
   gap: 0;
-  background: #000;
 }
 
-@media (min-width: 600px) {
+@media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0;
-    width: 100%;
+    grid-template-columns: 1fr;
   }
 }
 
 .card {
-  min-height: 750px;
-  border-radius: 0;
+  min-height: clamp(400px, 40vw, 750px);
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: var(--container-padding);
   text-decoration: none;
-  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   border: none;
 }
 
 .card::before {
   content: "";
   position: absolute;
-  inset: -2px;
+  inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.95) 0%,
-    rgba(0, 0, 0, 0.7) 40%,
-    rgba(0, 0, 0, 0.4) 100%
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.3) 100%
   );
   z-index: 1;
 }
 
 .cardBg {
   position: absolute;
-  inset: -2px;
+  inset: 0;
   background-size: cover;
   background-position: center;
-  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .card:hover .cardBg {
   transform: scale(1.1);
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 }
 
 .content {
@@ -84,22 +65,26 @@
 }
 
 .tag {
-  font-size: 16px;
+  font-size: clamp(12px, 2vw, 14px);
   text-transform: uppercase;
-  letter-spacing: 0.25em;
-  color: #fff;
-  opacity: 0.9;
+  letter-spacing: 0.3em;
+  color: var(--accent);
   margin-bottom: 16px;
   display: block;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .title {
-  font-family: "Outfit", sans-serif;
-  font-size: clamp(40px, 4vw, 64px);
-  font-weight: 800;
+  font-size: clamp(32px, 5vw, 64px);
   color: #fff;
   margin: 0;
-  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.8);
-  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+@media (max-width: 480px) {
+  .card {
+    min-height: 350px;
+  }
+  .title {
+    font-size: 28px;
+  }
 }

@@ -1,7 +1,7 @@
 .footer {
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-strong);
-  padding: 80px 40px 40px;
+  padding: 80px var(--container-padding) 40px;
   margin-top: auto;
   position: relative;
 }
@@ -19,6 +19,17 @@
   .container {
     grid-template-columns: 1fr;
     gap: 48px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding-top: 60px;
+  }
+  .container {
+    gap: 40px;
+    margin-bottom: 40px;
   }
 }
 

@@ -8,7 +8,7 @@ export function Hero() {
     <section className={styles.section}>
       <div className={styles.videoWrapper}>
         <video autoPlay loop muted playsInline poster="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1600&auto=format&fit=crop">
-          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-glass-blocks-moving-in-the-shadows-33827-preview.mp4" type="video/mp4" />
         </video>
         <div className={styles.overlay} />
       </div>

@@ -41,7 +41,7 @@
 .content {
   position: relative;
   z-index: 3;
-  padding: 0 40px;
+  padding: 0 var(--container-padding);
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
@@ -49,11 +49,11 @@
 
 .meta {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
+  font-size: clamp(10px, 1.5vw, 12px);
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.3em;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -61,32 +61,37 @@
 
 .meta::before {
   content: '';
-  width: 40px;
+  width: clamp(20px, 4vw, 40px);
   height: 1px;
   background: var(--accent);
 }
 
 .title {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(64px, 12vw, 180px);
-  font-weight: 800;
-  line-height: 0.85;
-  margin-bottom: 48px;
-  letter-spacing: -0.06em;
-  color: var(--text-primary);
-  text-transform: uppercase;
+  font-size: clamp(32px, 10vw, 150px);
+  line-height: 0.9;
+  margin-bottom: 32px;
+  letter-spacing: -0.04em;
 }
 
 .subtitle {
-  font-size: clamp(18px, 2vw, 24px);
+  font-size: clamp(14px, 1.8vw, 20px);
   color: var(--text-secondary);
   max-width: 600px;
   line-height: 1.5;
-  margin-bottom: 64px;
+  margin-bottom: 48px;
 }
 
 .actions {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+  }
+  .actions a, .actions button {
+    width: 100%;
+  }
 }

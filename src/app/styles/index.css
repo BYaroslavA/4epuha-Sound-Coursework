@@ -32,6 +32,23 @@
   --duration-slow: 0.8s;
 
   --header-height: 72px;
+  --section-padding: 120px;
+  --container-padding: 40px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --container-padding: 32px;
+    --section-padding: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 16px;
+    --section-padding: 60px;
+    --header-height: 64px;
+  }
 }
 
 * {
@@ -85,6 +102,11 @@ body::before {
   opacity: 0.5;
 }
 
+#root {
+  width: 100%;
+  max-width: 100vw;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
@@ -92,6 +114,23 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
   line-height: 1.1;
   color: var(--text-primary);
+}
+
+h1 { font-size: clamp(40px, 10vw, 120px); }
+h2 { font-size: clamp(32px, 8vw, 64px); }
+h3 { font-size: clamp(24px, 6vw, 40px); }
+
+.page-container {
+  padding: calc(var(--header-height) + 40px) var(--container-padding) 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+@media (max-width: 480px) {
+  .page-container {
+    padding-top: calc(var(--header-height) + 24px);
+  }
 }
 
 .mono {
@@ -117,6 +156,8 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
 }
 
 img {

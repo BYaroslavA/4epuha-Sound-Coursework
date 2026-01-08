@@ -68,3 +68,29 @@
   color: var(--text-secondary);
   line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    border: none;
+    background: transparent;
+  }
+  .card {
+    padding: 60px 32px;
+    min-height: auto;
+    border-bottom: 1px solid var(--border-strong);
+  }
+  .card:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 48px 24px;
+  }
+  .title {
+    font-size: 28px;
+  }
+}
